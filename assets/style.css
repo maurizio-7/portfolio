@@ -1,0 +1,181 @@
+/* Background */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(234, 239, 239) 50%, rgb(191, 201, 209) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 16s;
+}
+
+.bg3 {
+    animation-duration: 20s;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+/* Header */
+body>section:nth-child(1)>nav {
+    background-color: #25343F;
+}
+
+#navbarsExample08>ul>li:nth-child(1)>a {
+    color: #FF9B51;
+}
+
+body>section.about-me>div>div.container>div>div>div:nth-child(2)>div>button {
+    color: #FF9B51;
+    background-color: #25343F;
+}
+
+
+/* .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    transform: translateY(8px);
+    
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+} */
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.3s ease 0.15s,
+        transform 0.3s ease 0.15s,
+        visibility 0.3s ease 0.15s;
+}
+
+/* On hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+/* Sliding tech stack */
+.tech-stack {
+    overflow: hidden;
+    background: #EAEFEF;
+    padding: 0;
+}
+
+.slider {
+    width: 100%;
+    border: 2px solid #FF9B51
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 12);
+    /* 6 items x 2 */
+    animation: scroll 20s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    flex-shrink: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* My Projects */
+#custom-cards>h2 {
+    border-bottom: 1px solid #BFC9D1;
+}
+
+.hover-grow {
+    transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.03);
+}
+
+
+
+/* Youtube Section */
+.youtube-video {
+    display: flex;
+    justify-content: center;
+}
+
+#youtube>div>div:nth-child(1) {
+    border-bottom: 1px solid #BFC9D1;
+}
+
+
+
+/* Footer */
+#footer-contact-me {
+    color: #FF9B51;
+}
+
+#footer>div>footer>ul {
+    border-bottom: 1px solid #BFC9D1;
+}
+
+
+
+
+
